@@ -1,0 +1,92 @@
+.team {
+  padding: 120px 0 120px;
+  background-color: #f4f4fd;
+}
+.team-title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11111;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #2e2f42;
+}
+
+.team-list {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  margin-top: 72px;
+}
+
+.team-member {
+  width: calc((100% - 72px) / 4);
+  height: 428px;
+  background: #ffffff;
+  border-radius: 0 0 4px 4px;
+  box-shadow:
+    0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16),
+    0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
+
+.team-member img {
+  width: 100%;
+  height: auto;
+}
+
+.team-name {
+  margin: 0 0 8px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #2e2f42;
+}
+
+.team-position {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #434455;
+}
+
+.team-card-content {
+  padding: 32px 16px;
+}
+
+.team-social-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  list-style: none;
+  margin-top: 8px;
+}
+
+.team-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #4d5ae5;
+  transition: background-color 250ms ease;
+}
+
+.team-social-item {
+  width: 40px;
+  height: 40px;
+}
+.team-social-icon {
+  width: 16px;
+  height: 16px;
+  color: #f4f4fd;
+}
+.team-social-link:hover,
+.team-social-link:focus {
+  background-color: #404bbf;
+}

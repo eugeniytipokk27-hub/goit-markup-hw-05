@@ -1,0 +1,234 @@
+.menu-open-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: none;
+  color: #2f2f37;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.menu-open-button:focus-visible {
+  outline: 2px solid #4d5ae5;
+  outline-offset: 2px;
+}
+
+.menu-icon,
+.menu-icon::before,
+.menu-icon::after {
+  display: block;
+  width: 24px;
+  height: 2px;
+  border-radius: 2px;
+  background-color: currentColor;
+}
+
+.menu-icon {
+  position: relative;
+}
+
+.menu-icon::before,
+.menu-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.menu-icon::before {
+  top: -7px;
+}
+
+.menu-icon::after {
+  top: 7px;
+}
+
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateX(100%);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(0);
+}
+
+.mobile-menu-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 428px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 72px 24px 40px;
+  overflow-y: auto;
+}
+
+.mobile-menu-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 1px solid rgba(46, 47, 66, 0.1);
+  border-radius: 50%;
+  color: #2e2f42;
+  background-color: #e7e9fc;
+  cursor: pointer;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu-close:hover,
+.mobile-menu-close:focus-visible {
+  border-color: #404bbf;
+  color: #ffffff;
+  background-color: #404bbf;
+}
+
+.mobile-menu-close:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(77, 90, 229, 0.25);
+}
+
+.mobile-menu-close-icon {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+}
+
+.mobile-menu-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.mobile-menu-nav-link {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu-nav-link:hover,
+.mobile-menu-nav-link:focus-visible {
+  color: #404bbf;
+}
+
+.mobile-menu-nav-link:focus-visible,
+.mobile-menu-contact-link:focus-visible {
+  outline: 2px solid rgba(77, 90, 229, 0.45);
+  outline-offset: 2px;
+}
+
+.mobile-menu-bottom {
+  margin-top: auto;
+  padding-top: 48px;
+}
+
+.mobile-menu-address {
+  font-style: normal;
+}
+
+.mobile-menu-contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.mobile-menu-contact-link {
+  display: inline-block;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #434455;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu-contact-link.phone {
+  font-weight: 700;
+  font-size: 24px;
+  color: #4d5ae5;
+}
+
+.mobile-menu-contact-link:hover,
+.mobile-menu-contact-link:focus-visible {
+  color: #404bbf;
+}
+
+.mobile-menu-social-list {
+  display: flex;
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.mobile-menu-social-item {
+  width: 40px;
+  height: 40px;
+}
+
+.mobile-menu-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #4d5ae5;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu-social-link:hover,
+.mobile-menu-social-link:focus-visible {
+  background-color: #404bbf;
+}
+
+.mobile-menu-social-link:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(77, 90, 229, 0.25);
+}
+
+.mobile-menu-social-icon {
+  width: 24px;
+  height: 24px;
+  fill: #f4f4fd;
+}
+
+.menu-open {
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .menu-open-button,
+  .mobile-menu,
+  .mobile-menu.is-open {
+    display: none;
+  }
+}
