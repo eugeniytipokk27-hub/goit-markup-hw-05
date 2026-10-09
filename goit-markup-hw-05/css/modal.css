@@ -77,8 +77,7 @@
 .modal-close-icon {
   width: 24px;
   height: 24px;
-  fill: none;
-  stroke: currentColor;
+  fill: currentColor;
 }
 
 .modal-title {
